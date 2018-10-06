@@ -1,0 +1,39 @@
+{
+    "name": "airship/airship-php",
+    "description": "Airship PHP SDK",
+    "keywords": [
+        "airship"
+    ],
+    "homepage": "https://github.com/airshiphq/airship-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Airship Support <support@airshiphq.com>",
+            "homepage": "https://airshiphq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Airship\\": "src/Airship/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Airship\\": "tests/Airship/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.3",
+        "phpunit/phpunit": "^5.7",
+        "mockery/mockery": "^1.1"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src"
+    }
+}
