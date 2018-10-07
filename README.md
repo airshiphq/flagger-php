@@ -9,7 +9,7 @@
 # Airship PHP
 
 ## Requirement
-PHP 5.5 or higher
+PHP 7 or higher
 
 ## Prerequisite
 
@@ -23,7 +23,7 @@ This SDK works with the [Airship Microservice](https://github.com/airshiphq/airs
 
 
 ## 01 Installation
-`php composer.phar require airship/airship-php`
+`php composer.phar require airship/flagger`
 
 ## 02 Key Concepts
 
@@ -39,12 +39,12 @@ To configure Airship, we would need to pass a new Client instance.
 require 'vendor/autoload.php';
 
 // Create an instance with an env key
-$airship = new Airship\Airship(new Airship\Client\GuzzleClient('<env_key>'));
+$flagger = new Flagger\Flagger(new Flagger\Client\GuzzleClient('<env_key>'));
 ```
 
 ## 04 Usage
 ```php
-if ($airship->flag('bitcoin-pay')->isEnabled(['id' => 5])) {
+if ($flagger->flag('bitcoin-pay')->isEnabled(['id' => 5])) {
   // ...
 }
 
@@ -71,9 +71,9 @@ $entity = [
   'displayName' => '1234',
 ];
 
-$airship->flag('bitcoin-pay')->isEnabled($entity); // Does the entity have the feature 'bitcoin-pay'?
-$airship->flag('bitcoin-pay')->getTreatment($entity); // Get the treatment associated with the flag
-$airship->flag('bitcoin-pay')->isEligible($entity);
+$flagger->flag('bitcoin-pay')->isEnabled($entity); // Does the entity have the feature 'bitcoin-pay'?
+$flagger->flag('bitcoin-pay')->getTreatment($entity); // Get the treatment associated with the flag
+$flagger->flag('bitcoin-pay')->isEligible($entity);
 // Returns true if the entity can potentially receive the feature via sampling
 // or is already receiving the feature.
 
@@ -186,7 +186,7 @@ $entity = [
   ],
 ];
 
-$airship->flag('bitcoin-pay')->isEnabled($entity);
+$flagger->flag('bitcoin-pay')->isEnabled($entity);
 ```
 
 ## Contributing
