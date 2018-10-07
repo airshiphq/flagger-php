@@ -1,6 +1,6 @@
 {
     "name": "airship/flagger",
-    "description": "Airship PHP SDK",
+    "description": "Flagger PHP SDK",
     "keywords": [
         "feature",
         "flag"
