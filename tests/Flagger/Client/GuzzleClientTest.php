@@ -1,8 +1,8 @@
 <?php
 
-namespace Airship\Client;
+namespace Flagger\Client;
 
-use Airship\TestCase;
+use Flagger\TestCase;
 use Closure;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
@@ -13,7 +13,7 @@ use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 
 /**
- * @covers \Airship\Client\GuzzleClient
+ * @covers \Flagger\Client\GuzzleClient
  */
 class GuzzleClientTest extends TestCase
 {

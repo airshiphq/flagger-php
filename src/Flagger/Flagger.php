@@ -1,9 +1,9 @@
 <?php
-namespace Airship;
+namespace Flagger;
 
-use Airship\Client\ClientInterface;
+use Flagger\Client\ClientInterface;
 
-class Airship
+class Flagger
 {
     /**
      * @var ClientInterface
@@ -17,7 +17,7 @@ class Airship
 
     public function __toString()
     {
-        return '[Airship object]';
+        return '[Flagger object]';
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Airship\Client;
+namespace Flagger\Client;
 
 interface ClientInterface
 {

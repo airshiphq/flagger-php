@@ -1,7 +1,7 @@
 <?php
 
-use Airship\Entity;
-use Airship\TestCase;
+use Flagger\Entity;
+use Flagger\TestCase;
 
 class EntityTest extends TestCase
 {

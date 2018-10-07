@@ -1,10 +1,11 @@
 {
-    "name": "airship/airship-php",
+    "name": "airship/flagger",
     "description": "Airship PHP SDK",
     "keywords": [
-        "airship"
+        "feature",
+        "flag"
     ],
-    "homepage": "https://github.com/airshiphq/airship-php",
+    "homepage": "https://github.com/airshiphq/flagger-php",
     "license": "MIT",
     "authors": [
         {
@@ -13,17 +14,17 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7",
         "guzzlehttp/guzzle": "^6.2.1"
     },
     "autoload": {
         "psr-4": {
-            "Airship\\": "src/Airship/"
+            "Flagger\\": "src/Flagger/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Airship\\": "tests/Airship/"
+            "Flagger\\": "tests/Flagger/"
         }
     },
     "require-dev": {

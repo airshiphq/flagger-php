@@ -1,14 +1,14 @@
 <?php
 
-namespace Airship;
+namespace Flagger;
 
-use Airship\Client\ClientInterface;
+use Flagger\Client\ClientInterface;
 use Mockery;
 
 /**
- * @covers \Airship\Airship
+ * @covers \Flagger\Flagger
  */
-class AirshipTest extends TestCase
+class FlaggerTest extends TestCase
 {
 
     public function test_determines_if_is_eligible()
@@ -21,7 +21,7 @@ class AirshipTest extends TestCase
                 'isEligible' => false,
             ]);
 
-        $airship = new Airship($client);
+        $flagger = new Flagger($client);
 
         $user = [
             'type' => 'User',
@@ -29,7 +29,7 @@ class AirshipTest extends TestCase
             'display_name' => 'ironman@stark.com',
         ];
 
-        self::assertFalse($airship->flag('paypal-pay')->isEligible($user));
+        self::assertFalse($flagger->flag('paypal-pay')->isEligible($user));
     }
 
     public function test_gets_treatment()
@@ -42,7 +42,7 @@ class AirshipTest extends TestCase
                 'treatment' => 'off',
             ]);
 
-        $airship = new Airship($client);
+        $flagger = new Flagger($client);
 
         $user = [
             'type' => 'User',
@@ -50,6 +50,6 @@ class AirshipTest extends TestCase
             'display_name' => 'ironman@stark.com',
         ];
 
-        self::assertEquals('off', $airship->flag('bitcoin-pay')->getTreatment($user));
+        self::assertEquals('off', $flagger->flag('bitcoin-pay')->getTreatment($user));
     }
 }

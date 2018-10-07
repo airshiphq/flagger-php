@@ -1,6 +1,6 @@
 <?php
 
-namespace Airship;
+namespace Flagger;
 
 class Entity
 {
@@ -32,7 +32,7 @@ class Entity
     private $attributes;
 
     /**
-     * @var \Airship\Entity|null
+     * @var \Flagger\Entity|null
      */
     private $group;
 
@@ -46,7 +46,7 @@ class Entity
      * @param string               $type
      * @param string|null          $displayName
      * @param array                $attributes
-     * @param \Airship\Entity|null $group
+     * @param \Flagger\Entity|null $group
      * @param bool                 $isGroup
      */
     public function __construct(
@@ -122,7 +122,7 @@ class Entity
     }
 
     /**
-     * @return \Airship\Entity|null
+     * @return \Flagger\Entity|null
      */
     public function getGroup()
     {
@@ -130,7 +130,7 @@ class Entity
     }
 
     /**
-     * @param \Airship\Entity $group
+     * @param \Flagger\Entity $group
      *
      * @return $this
      */

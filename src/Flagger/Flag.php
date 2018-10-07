@@ -1,17 +1,17 @@
 <?php
 
-namespace Airship;
+namespace Flagger;
 
 class Flag
 {
     public $flagName;
 
     /**
-     * @var Airship
+     * @var Flagger
      */
     private $delegate;
 
-    public function __construct($flagName, Airship $delegate)
+    public function __construct($flagName, Flagger $delegate)
     {
         $this->flagName = $flagName;
         $this->delegate = $delegate;
