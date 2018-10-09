@@ -9,7 +9,7 @@
 # Flagger PHP
 
 ## Requirement
-PHP 7 or higher
+PHP 7.1 or higher
 
 ## Prerequisite
 
